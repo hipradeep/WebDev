@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Question 1</h3>
+    <!-- <p>Write a program to show entry in textbox is mandatory and value entered should be between 4 to 8.</p> -->
+
+    <form action="">
+
+        <label for="NUM">Enter number between 4 and 8:</label>
+        <input type="number" id="NUM" name="NUM" min="4" max="8" required><br>
+
+        <input type="submit" value="submit">
+
+    </form>
+
+    <br><br><br>
+    <h3>Question 2</h3>
+    <section style="background-color: rgb(226, 226, 226);  width: 50vw; padding: 10px;">
+        <h1>Pizza shop</h1>
+
+        <form action="">
+
+            <table>
+                <tr>
+                    <td> <label for="name">Name</label></td>
+                    <td> <input type="text" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="address">Address</label></td>
+                    <td> <input type="text" required></td>
+                </tr>
+            </table>
+
+
+
+            <h3>Size</h3>
+            <input type="radio" name="size" value="Small" required>Small <br>
+            <input type="radio" name="size" value="Mediam" required>Mediam <br>
+            <input type="radio" name="size" value="Larg" required>Larg <br>
+
+            <h3>Toppings</h3>
+            <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni
+            <input type="checkbox" name="toppings" value="Sausage">Sausage
+            <input type="checkbox" name="toppings" value="Olives">Olives
+            <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms
+
+            <br>
+            <br>
+
+            <input type="submit" value="Deliver Order">
+            <input type="submit" value="Clear"><br><br>
+
+            <textarea name="" id="" cols="30" rows="7"></textarea>
+
+        </form>
+    </section>
+    <section style="background-color: rgb(254, 230, 230);  width: 50vw; padding: 10px;">
+        <h1>Autocomplete text</h1>
+
+        <form action="/action_page.php" autocomplete="on">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit">
+          </form>
+    </section>
+
+    <section hidden>
+
+    <h3>Play Mp3 List</h3>
+    <ul type="none">
+
+        <li>
+            <audio controls style="height: 30px;">
+                <source src="audio/Kgf_2_Ceo_Bgm.mp3" type="audio/mpeg">
+              </audio>
+        </li>
+        <li>
+            <audio controls style="height: 30px;">
+                <source src="audio/TodatodapyarhuatumseRingtone1486192735.mp3" type="audio/mpeg">
+              </audio>
+        </li>
+        <li>
+            <audio controls style="height: 30px;">
+                <source src="audio/SaamiSaamiringtone431108343.mp3" type="audio/mpeg">
+              </audio>
+        </li>
+    </ul>
+</section>
+</body>
+
+</html>
