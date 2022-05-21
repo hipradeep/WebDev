@@ -1,0 +1,125 @@
+
+
+.sec {
+    margin-top: 100px;
+    width: 800px;
+    margin-left: auto; 
+    margin-right: auto;
+    height: 800px;
+    position: relative;
+}
+
+.wall1 {
+    background-color: #b2e0f8;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+.wall2 {
+    background-color: #a8c0df;
+    width: 30%;
+    height: 100%;
+    margin-left: 70%;
+    z-index: 3;
+    position: absolute;
+    clip-path: polygon(50% 0, 100% 0, 100% 97%, 47% 100%);
+}
+.wall3 {
+    background-color: rgb(222, 224, 223);
+    width: 100%;
+    height: 32%;
+    bottom: 0%;
+    z-index: 4;
+    position: absolute;
+    clip-path: polygon(0% 5%, 84% 0%, 102% 100%, 0px 100%);
+}
+
+.card {
+    width: 200px;
+    height: 130px;
+    margin-left: 54px;
+    margin-bottom: -5px;
+    background-color: #868686;
+    border: 10px solid #868686;
+    border-radius: 25px;
+    box-shadow: 5px 10px #b2e0f8;   
+}
+.tv {
+  
+    left: 45%;
+    top: 41%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 10;
+}
+.table{
+    width: 300px;
+    margin-bottom: -170px;
+    z-index: 10;
+  
+}
+.leg1 {
+    width: 30px;
+    height: 10px;
+    background-color: rgb(75, 74, 73);
+    clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
+    display: inline-block;
+}
+
+.leg2 {
+    width: 30px;
+    height: 10px;
+    margin-left: 60px;
+    background-color: rgb(75, 74, 73);
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+    display: inline-block;
+}
+
+.legs {
+    margin-left: 95px;
+    position: relative;
+    margin-bottom: -5px;
+}
+
+.gif {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.sofa {
+    visibility: visible;
+    position: absolute;
+    left: 45%;
+    bottom: -20%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+
+.painting{
+    border: 5px solid black;
+    margin-top: 100px; margin-left: 80px;
+}
+.clock{
+    margin-top: 100px; margin-left: 180px;
+   
+}
+
+.leftFlower{
+    z-index: 7;
+    height:  320px;
+    margin-top: 260px;
+    margin-left: -70px;
+    position: absolute;
+}
+.rightFlower{
+    z-index: 7;
+    height:  330px;
+    margin-top: 238px;
+margin-left: 565px;
+    position: absolute;
+    display: block;
+}
