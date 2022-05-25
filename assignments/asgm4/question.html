@@ -10,7 +10,7 @@
 
 <body style="padding: 100px;">
     <!-- Q1 -->
-    <h2>Q.1 Write a program to display sum of two numbers .</h2>
+    <h3>Q.1 Write a program to display sum of two numbers .</h3>
     <p>x=10, y=20</p>
     <br>
     <button onclick="sumOfNumber(10, 20)">Sum</button>
@@ -18,21 +18,21 @@
 
     <!-- Q2 -->
 
-    <h2>Q.2 Write a program to find factorial of a number using prompt box.(getting input from user)</h2>
+    <h3>Q.2 Write a program to find factorial of a number using prompt box.(getting input from user)</h3>
     <br>
     <button onclick="factorial()">Fcatorial</button>
     <p id="fact"></p>
 
 
     <!-- Q3 -->
-    <h2> Q.3 Write a function to get input (using prompt box) from user and display a message.</h2>
+    <h3> Q.3 Write a function to get input (using prompt box) from user and display a message.</h3>
     <br>
     <button onclick="displayMsg()">Message</button>
     <p id="msg"></p>
 
 
     <!-- Q4 -->
-    <h2> Q.4 Check two given numbers and return true if one of the number is 50 or if their sum is 50</h2>
+    <h3> Q.4 Check two given numbers and return true if one of the number is 50 or if their sum is 50</h3>
     <br>
 
     <label for="num1">Eneter first num : </label><input type="number" name="num1" id="num1" required><br><br>
@@ -42,7 +42,7 @@
     <p id="check"></p>
 
     <!-- Q5 -->
-    <h2> Q.5 Write a program to find whether a number is odd or even using function.</h2>
+    <h3> Q.5 Write a program to find whether a number is odd or even using function.</h3>
     <br>
     <label for="num3">Enter a number </label><input type="number" name="num3" id="num3" required><br><br>
     <button onclick="checkOddEven()">Check</button>
@@ -51,7 +51,7 @@
 
 
     <script>
-
+        //sum of number
         function sumOfNumber(x, y) {
 
             let sum = x + y;
@@ -61,7 +61,7 @@
             document.getElementById("sum").innerHTML = p;
         }
 
-
+        //getting factorials
         function factorial() {
             let str = `Enter value to display factorials`;
             let v = '';
@@ -77,6 +77,7 @@
             document.getElementById("fact").innerHTML = f;
 
         }
+        //dispkay message
         function displayMsg() {
             let str = `Enter Your Name `;
             let v = '';
@@ -88,7 +89,8 @@
             document.getElementById("msg").innerHTML = f;
 
         }
-
+        
+        //check sum
         function sum() {
             let v = checkNum();
             document.getElementById("check").innerHTML = v;
@@ -99,10 +101,7 @@
             var num2 = document.getElementById("num2").value;
 
             let sum = parseInt(num1) + parseInt(num2);
-            console.log(typeof s)
 
-
-            var m = "";
             if (num1 == 50 || num2 == 50) {
                 return true;
             } else if  (sum == 50) {
@@ -112,11 +111,11 @@
             }
         }
 
+        //cheacking odd even
         function checkOddEven() {
             var num3 = document.getElementById("num3").value;
 
             if (parseInt(num3) % 2 == 0) {
-
                 document.getElementById("evenodd").innerHTML = `you enter <span style="background-color: green; color:white">even</span> number`;
             } else {
                 document.getElementById("evenodd").innerHTML = `you enter <span style="background-color: red; color:white">odd</span> number`;
