@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5 Questions</title>
 </head>
 
 <body style="padding: 100px;">
@@ -47,6 +47,13 @@
     <label for="num3">Enter a number </label><input type="number" name="num3" id="num3" required><br><br>
     <button onclick="checkOddEven()">Check</button>
     <p id="evenodd"></p>
+
+    <!-- Q6 -->
+    <h3> Q.6 Factorials</h3>
+    <br>
+    <label for="num4">Enter a number </label><input type="number" name="num4" id="num4" required><br><br>
+    <button onclick="calculateFactorial()">Factorial</button>
+    <p id="Factorials"></p>
 
 
 
@@ -120,6 +127,21 @@
             } else {
                 document.getElementById("evenodd").innerHTML = `you enter <span style="background-color: red; color:white">odd</span> number`;
             }
+
+        }
+
+        //getting factorials
+        function calculateFactorial() {
+            var num4 = document.getElementById("num4").value;
+            
+            let s = 1;
+            for (let x = 1; x <= num4; x++) {
+                s = s * x;
+            }
+
+            let f = `Fcatorial of ${num4} is = ${s}`;
+
+            document.getElementById("Factorials").innerHTML = f;
 
         }
 
