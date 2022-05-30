@@ -1,0 +1,133 @@
+.formContainer {
+    width: 45vw;
+    height: auto;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    background-color: antiquewhite;
+    padding: 0% 2% 2%;
+}
+
+#form_heading {
+    align-self: center;
+}
+
+.form_row {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#lebel {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#sub_label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    padding-left: 6px;
+    margin-right: 10px;
+    text-indent: -0px;
+}
+
+#sub_label2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+
+}
+
+.input {
+    width: 70%;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: content-box;
+    /* border: 1px solid saddlebrown;
+    box-shadow: 2px 2px red; */
+    border-radius: 5px;
+    letter-spacing: 1px;
+
+}
+
+.input_check {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+.input_radio {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+.check {
+    width: 72%;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+.selectedPic {
+    width: 140px;
+    height: 175px;
+    border: 1px solid gray;
+}
+
+.document {
+    width: 72%;
+    padding-left: 10px;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.choose_op {
+    max-width: 350px;
+}
+
+#discription {
+    font-size: small;
+}
+
+.discription_title {
+    font-size: medium;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+ul {
+    margin-top: -15px;
+}
+
+li {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg {
+    background-color: aquamarine;
+}
+
+.remove_pd {
+    padding-left: 0px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 5px;
+}
