@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_m30.css">
-    <title>Document</title>
+    <title>Form Validation</title>
 </head>
 
 <body>
@@ -83,47 +83,31 @@
                         </div>
                     </div>
 
-
-
                     <div class="fileConatainer">
                         <div class="selectedPic">
                             <img id="profile_div" src="images/placeholder1.webp" alt="" width="100%" height="100%">
                         </div>
 
                         <div class="file_select_btn">
-                            <input type="button" id="loadFile" value="Select document" onclick="getFile()" />
+                            <input type="button" id="loadFile" value="Select document" onclick=" document.getElementById('file').click();" />
                             <input type="file" onchange="previewFile()" style="display:none;" id="file"
                                 name="selected_file" />
-
                         </div>
-
-
                     </div>
-
-
                 </div>
 
             </div>
             <div id="file_name"></div>
-
             <hr class="divider">
             <div class="form_submit_btn">
-
                 <input class="btn_main reset" type="reset">
-
                 <input class="btn_main submit" type="submit">
-
             </div>
-
-
         </div>
-
     </form>
 
     <script>
-        function getFile() {
-            document.getElementById('file').click();
-        }
+    
 
         function previewFile() {
             let doc_file = document.forms['simpleForm']['selected_file'];
