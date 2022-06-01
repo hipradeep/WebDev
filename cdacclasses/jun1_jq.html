@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/jun1_jq.css">
+    <title>jquery</title>
+</head>
+
+<body>
+
+    <div class="mainDiv">
+
+        <div class="menu">
+            <div class="menu1 menu11">
+                <img class="img-menu img1" alt="">
+            </div>
+
+            <div class="menu1 menu12">
+
+                <img class="img-menu img2" alt="">
+            </div>
+            <div class="menu1 menu13">
+
+                <img class="img-menu img3" alt="">
+            </div>
+            <div class="menu1 menu14">
+
+                <img class="img-menu img4" alt="">
+            </div>
+
+        </div>
+        <div class="containt">
+
+            <div class="heading" hidden>
+                <h1 id="movie_title">
+
+                </h1>
+                <h3 id="subTitle"></h3>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <script>
+        // The-Rise-of-Skywalker
+        let title1 = "The Rise of Skywalker (2019)";
+        let img1 = "https://scitechdaily.com/images/Star-Wars-The-Rise-of-Skywalker-777x536.jpg?ezimgfmt=ng:webp/ngcb1";
+        let subTitle1 = "In the riveting conclusion of the landmark Skywalker saga, new legends will be born-and the final battle for freedom is yet to come.";
+
+
+        //Solo: A Star Wars Story
+        let title2 = "Solo: A Star Wars Story (2018)";
+        let img2 = "https://lumiere-a.akamaihd.net/v1/images/solo-theatrical-poster-1000_27861ab7.jpeg?region=0%2C0%2C1000%2C1481&width=600";
+        let subTitle2 = "Board the Millennium Falcon and journey to a galaxy far, far away in an epic action-adventure that will set the course of one of the Star Wars saga's most unlikely heroes.";
+
+        //Star Wars: Episode VIII - The Last Jedi
+        let title3 = "Star Wars: Episode VIII - The Last Jedi (2017) ";
+        let img3 = "https://lumiere-a.akamaihd.net/v1/images/the-last-jedi-theatrical-poster-film-page_bca06283.jpeg?region=0%2C0%2C480%2C711";
+        let subTitle3 = "The Star Wars saga continues as new heroes and galactic legends go on an epic adventure, unlocking mysteries of the Force and shocking revelations of the past.";
+
+        //Rogue One: A Star Wars Story
+        let title4 = "Rogue One: A Star Wars Story (2016)";
+        let img4 = "https://lumiere-a.akamaihd.net/v1/images/rogueone_onesheeta_1000_309ed8f6.jpeg?region=0%2C0%2C1000%2C1481&width=600";
+        let subTitle4 = "In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.";
+
+
+        class StarWar {
+            constructor(title, img, subTitle) {
+                this.title = title;
+                this.img = img;
+                this.subTitle = subTitle;
+            }
+        }
+
+        let mov1 = new StarWar(title1, img1, subTitle1);
+        let mov2 = new StarWar(title2, img2, subTitle2);
+        let mov3 = new StarWar(title3, img3, subTitle3);
+        let mov4 = new StarWar(title4, img4, subTitle4);
+
+        const movieArr = [mov1, mov2, mov3, mov4];
+
+
+        $(document).ready(function () {
+            for (var i = 0; i < movieArr.length; i++) {
+                let cl = "img" + (i + 1);
+                $("." + cl).attr("src", movieArr[i].img);               
+                setContaint(0, false);
+            }
+
+            var p=1;
+            $(".menu").on("click", "div", function () {
+        
+                setContaint($(this).index(), true);
+
+                // let me="menu"+($(this).index()+1)
+
+                // if(($(this).index()+1) != )
+
+                // $("."+me).css('border', '5px solid red');
+
+            });
+
+        });
+
+        function setContaint(index, isHidden) {
+
+            if (isHidden) {
+                $(".heading").hide();
+                $(".containt").hide();
+            }
+            $(".heading").fadeIn(500);
+            $(".containt").fadeIn(200);
+
+            $(".containt").css('background-image', 'url(' + movieArr[index].img + ')');
+            $(".containt").css('background-repeat', 'no-repeat');
+            $(".containt").css('background-size', '100% 100%');
+            $(".containt").css(' background-position', 'center');
+            
+            $("#movie_title").text(movieArr[index].title);
+            $("#subTitle").text(movieArr[index].subTitle);
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
