@@ -23,7 +23,6 @@
             </div>
 
             <div class="menu1 menu12">
-
                 <img class="img-menu img2" alt="">
                 <div class="menuTitleDiv menuTitleDiv2">
                     <h3 class="menuTitle">pradeep</h3>
@@ -99,16 +98,19 @@
         const movieArr = [mov1, mov2, mov3, mov4];
 
 
+        var p=1;
+        $(".menuTitleDiv").hide();
         $(document).ready(function () {
             for (var i = 0; i < movieArr.length; i++) {
                 let cl = "img" + (i + 1);
                 $("." + cl).attr("src", movieArr[i].img);
+                $("."+"menuTitleDiv"+(i+1)).children().text(movieArr[i].title)
                 setContaint(0, false);
             }
 
-        
             $(".menu").on("click", "div", function () {
                 setContaint($(this).index(), true);
+
             });
   
 
