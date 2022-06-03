@@ -1,0 +1,15 @@
+body{
+    font-family: monospace;
+}
+div{
+    color: blue;
+}
+h2{
+    color: violet;
+}
+p{
+    color:darkblue;
+}
+*{
+    color: aqua;
+}

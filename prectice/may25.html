@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 300px;
+            border: 2px solid greenyellow;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+
+        }
+
+        .contant {
+            height: 100%; width: 100%;
+            padding: 10px;
+            color: white;
+            background: rgb(255, 216, 216, 0.8);
+            top: 0;
+            left: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            transition: all .5s;
+        }
+
+        .box:hover .contant{
+            left: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <img src="img/peppa.webp" alt="">
+        <div class="contant">
+            <h2>Pradeep Maurya</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio minima sa</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_form_validation.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" name="simpleForm" onsubmit="return validation()">
+        <div class="formContainer">
+            <h1 id="form_heading">Form validation</h1>
+            <div class="form_row">
+                <label id="lebel" for="first_name">First Name<span class="span_star">*</span></label>
+                <input class="input" type="text" placeholder="Enter first name" name="first_name" value="" required>
+            </div>
+
+            <div class="form_row">
+                <label id="lebel" for="middle_name">Middle Name</label>
+                <input class="input" type="text" placeholder="Enter middle name(optional)" name="middle_name" value="">
+            </div>
+
+            <div class="form_row">
+                <label id="lebel" for="last_name">Last Name<span class="span_star">*</span></label>
+                <input class="input" type="text" placeholder="Enter last name" name="last_name" value="" required>
+            </div>
+            <div class="form_row">
+                <label id="lebel" for="email_address">Email address<span class="span_star">*</span></label>
+                <input class="input" type="email" placeholder="Email address" name="email_address" value=""
+                    required>
+            </div>
+            <div class="check">
+                <input class="input_check" type="checkbox" name="notification" id="r1" value="yes" 
+                    ><label id="sub_label" for="r1">Do <strong>not</strong> send me bussiness
+                    notifications</label>
+            </div>
+
+            <div class="form_row">
+                <label class="" id="lebel" for="">Select gender<span class="span_star">*</span></label>
+
+                <div class="check">
+                    <input class="input_radio" type="radio" name="gender" id="gen_male" value="male" 
+                        required><label id="sub_label" for="gen_male">Male</label>
+                    <input class="input_radio" type="radio" name="gender" id="gen_female" value="female" required><label
+                        id="sub_label" for="gen_female">Femal</label>
+                    <input class="input_radio" type="radio" name="gender" id="gen_oth" value="other" required><label
+                        id="sub_label" for="gen_oth">Other</label>
+
+                </div>
+            </div>
+            <div class="form_row">
+                <label id="lebel" for="mobile_address">Mobile number<span class="span_star">*</span></label>
+                <input class="input" type="tel" placeholder="Enter mobile" name="mobile_address" value=""
+                    required minlength="10" maxlength="10">
+            </div>
+            <div class="form_row">
+
+                <label id="lebel" for="">Upload document<span class="span_star">*</span></label>
+                <div class="  document ">
+                    <div class="choose_op">
+                        <div class="opt">
+
+                            <label for="doc-names" id="sub_label2">Choose doument type:</label>
+                            <select name="doc_names" id="doc-names">
+                                <option value="" disabled selected hidden>Choose doc type</option>
+                                <option value="Adhar">Adhar</option>
+                                <option value="PAN">PAN</option>
+                                <option value="Driving Licence">Driving Licence</option>
+
+                            </select>
+                        </div>
+                        <div class="discription">
+                            <p class="discription_title">Document must be-</p>
+                            <ul>
+                                <li>document formate: png/jpeg</li>
+                                <li>size of document: 20KB-500KB</li>
+                                <li>document should be readable</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fileConatainer">
+                        <div class="selectedPic">
+                            <img id="profile_div" src="img/placeholder1.webp" alt="" width="100%" height="100%">
+                        </div>
+
+                        <div class="file_select_btn">
+                            <input type="button" id="loadFile" value="Select document" onclick="getFile()" />
+                            <input type="file" onchange="previewFile()" style="display:none;" id="file"
+                                name="selected_file" />
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div id="file_name"></div>
+
+            <hr class="divider">
+            <div class="form_submit_btn">
+
+                <input class="btn_main reset" type="reset">
+
+                <input class="btn_main submit" type="submit">
+
+            </div>
+
+
+        </div>
+
+    </form>
+
+    <script>
+        function getFile() {
+            document.getElementById('file').click();
+        }
+
+        function previewFile() {
+            let doc_file = document.forms['simpleForm']['selected_file'];
+            let preview = document.getElementById('profile_div');
+            let file = doc_file.files.item(0);
+            // console.log(file);
+            // console.log(doc_file.value);
+            // console.log(doc_file.files.item(0).name);
+            // console.log(doc_file.files.item(0).size);
+            // console.log(doc_file.files.item(0).type);
+
+            document.getElementById('file_name').innerHTML = doc_file.files.item(0).name + "<br>" + "Size: " +
+                (doc_file.files.item(0).size / 1024).toFixed(2) + "KB";
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "";
+            }
+        }
+        function validation() {
+
+            let first_name = document.forms['simpleForm']['first_name'].value;
+            let middle_name = document.forms['simpleForm']['middle_name'].value;
+            let last_name = document.forms['simpleForm']['last_name'].value;
+            let email_address = document.forms['simpleForm']['email_address'].value;
+            let notification = document.forms['simpleForm']['notification'].value;
+            let gender = document.forms['simpleForm']['gender'].value;
+            let doc_si = document.forms['simpleForm']['doc_names'].selectedIndex;
+            let doc_selected_value = document.forms['simpleForm']['doc_names'].value;
+            let doc_file = document.forms['simpleForm']['selected_file'];
+
+            if (doc_si == 0) {
+                alert("Select document type");
+                return false;
+            }
+
+            console.log(doc_file.files.item(0).type.split("/")[1]);
+            if (!doc_file.value) {
+                alert("Select document file!")
+                return false;
+            } else if (doc_file.files.item(0).type.split("/")[1] != "png" && doc_file.files.item(0).type.split("/")[1] !="jpeg") {
+                alert("Document must be in png/jpeg formate!")
+                return false;
+            }        
+            
+            else if (doc_file.files.item(0).size < (20 * 1024)) {
+                //file size must be 20KB-500KB
+                // console.log(doc_file.files.item(0).size);
+                alert("File size is too small!")
+                return false;
+            } else if (doc_file.files.item(0).size > (500 * 1024)) {
+                alert("File size is too big!")
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

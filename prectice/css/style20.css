@@ -1,0 +1,16 @@
+
+.outer{
+    width: 200px; height: 200px;
+    background: violet;
+
+}
+.inner{
+    width: 100%; height: 50%;
+    background: red;
+}
+.relative{
+
+}
+.absolute{
+    
+}
