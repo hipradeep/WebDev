@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Application for the Post of PROJECT ENGINEER</h1>
+        <div class="block1">
+            <label for="position">1. Position Code (select one):
+                <span class="required">*</span>
+            </label>
+            <select name="position" id="">
+                <option value="" selected>Select</option>
+                <option value="1">pose 1</option>
+                <option value="2">pose 2</option>
+                <option value="3">pose 3</option>
+            </select>
+            <br><br>
+            <hr>
+            <div class="left">
+                <label for="">
+                    2. Name:
+                    <span class="required">*</span>
+                </label>
+                <input type="text">
+                <br>
+                <label for="">
+                    3. Father's Name:
+                    <span class="required">*</span>
+                </label>
+                <input type="text">
+                <br>
+                <label for="">
+                    4. Date of Birth:
+                    <span class="required">*</span>
+                </label>
+                <input type="date" id="date">
+                <label for="" class="lbl-age">Age</label>
+                <input type="number" id="age" readonly>
+                <br>
+                <label for="">5. Gender
+                    <span class="required">*</span>
+                </label>
+                <select name="" id="">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <label for="">6. Nationality:
+                    <span class="required">*</span>
+                </label>
+                <input type="text" name="" id="">
+                <br>
+                <label for="">7. Marital status:
+                    <span class="required">*</span>
+                </label>
+                <select name="" id="">
+                    <option value="" selected>Select</option>
+                    <option value="married">married</option>
+                    <option value="unmarried">unmarried</option>
+                </select>
+                <br>
+                <label for="">8. Whether belongs to (Select one)
+                    <span class="required">*</span>
+                </label>
+                <input type="radio" name="cast">SC
+                <input type="radio" name="cast">ST
+                <input type="radio" name="cast">OBC
+                <input type="radio" name="cast">PWd
+                <input type="radio" name="cast">General
+            </div>
+
+            <div class="right">
+                <label for="">Upload your photo
+                    <span class="required">*</span>
+                </label>
+                <br>
+                <img id="photo" src="" style="width: 150px; height: 200px;">
+            </div>
+            <input type="file" id="photo_file">
+        </div>
+    </div>
+    <br><br>
+    <hr>
+    <!-------------block 1 end---------------->
+    <div class="block2">
+        <label>9. Proof of identity:<span class="required">*</span>
+            </label>
+        <select id="sid">
+            <option value="PAN">PAN number</option>
+            <option value="Adhar">Adhar number</option> 
+        </select>
+        <input id="idno" type="text" placeholder="Enter your PAN">
+        <br><br>
+        <table width="100%">
+            <tr>
+                <td width="20%" style="text-align: left;">
+                    <label>10. Address for the Correspondence:<span class="required">*</span></label>
+                </td>
+                <td width="40%" style="text-align: left;">
+                    <textarea style="display: inline; width: 100%;" name="" id="" cols="35" rows="5"></textarea>
+                </td>
+                <td>
+                    <table width="100%" style="text-align: center;">
+                        <tr>
+                            <td colspan="3">Phone number (with STD code)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Office</label></td>
+                            <td><label for="">Residence</label></td>
+                            <td><label for="">Mobile<span class="required">*</span></label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" style="width: 120px;"></td>
+                            <td><input type="number" style="width: 120px;"></td>
+                            <td><input id="mob" type="text" maxlength="10" style="width: 120px;"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <table width="100%">
+            <tr class="leftalign">
+                <td width="25%">
+                    <label for="">Select state
+                            <span class="required">*</span>
+                        </label>
+                    <select name="" id="" style="width:250px; margin-left: 0;">State</select>
+                </td>
+                <td width="25%">
+                    <label for="">Select Town
+                            <span class="required">*</span>
+                        </label>
+                    <select name="" id="" style="width:250px ; margin-left: 0;">Town</select>
+                </td>
+                <td width="50%">
+                    <label for="">
+                            Primary E-mail:
+                            <span class="required">*</span>
+                        </label>
+                    <input style="margin-left: 0;" type="email">
+                </td>
+            </tr>
+            <tr class="leftalign">
+                <td colspan="2"><label for="">Pincode
+                            <span class="required">*</span>
+                        </label>
+                    <input type="number">
+                </td>
+                <td width="50%">
+                    <label for="">
+                            Secondary E-mail:
+                        </label>
+                    <input style="margin-left: 0;" type="email">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <hr>
+    </div>
+    <!---------Block 2 end--------->
+
+    <div class="block3">
+        <label for="">11. Are you currently working with C-DAC?
+                <span class="required">*</span>
+            </label>
+        <select name="" id="">
+                <option value="yes">YES</option>
+                <option value="no">No</option>
+            </select>
+        <br><br>
+
+        <label for="">12. Are you employed in any Govt./ Semi-Govt./ PSU/
+                Autonomous Bodies?
+                <span class="required">*</span>
+            </label>
+        <select name="" id="">
+                <option value="yes">YES</option>
+                <option value="no">No</option>
+            </select>
+        <p>
+            If <b>"Yes"</b> the application should be forwarded through proper channel or NOC to be produced at the time of Interview
+        </p>
+        <br>
+        <label for="">13. Have you ever been interviewed for recruitment in any
+                post in C-DAC earlier?
+                <span class="required">*</span>
+            </label>
+        <select name="" id="">
+                <option value="yes">YES</option>
+                <option value="no">No</option>
+            </select>
+        <br><br>
+        <hr>
+    </div>
+    <!----------block3 end-------------->
+
+    <div class="block4">
+        <label for="" style="width: auto">14. Academic & Professional Qualifications </label> (Begin with latest Graduation/ PG/ PG Diploma (if any)/ PhD)
+        <br><br>
+        <table border="1px" id="Qualification" width="100%" cellspacing="0">
+            <thead>
+                <th>
+                    Qualification <span class="required">*</span>
+                </th>
+                <th>Name of Institute/Board/University <span class="required">*</span></th>
+                <th>Specialization <span class="required">*</span> </th>
+                <th>Year of Passing <span class="required">*</span></th>
+
+                <th>% Marks (Aggregate) <span class="required">*</span></th>
+                <th>Class/ Division/ Rank/ Distinction <span class="required">*</span></th>
+                <th><button id="btn_add1">Add Row</button></th>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>
+                        <select class="auto_size">
+                            <option value="">select</option>
+                            <option value="">hsc</option>
+                            <option value="">ssc</option>
+                        </select>
+                    </td>
+                    <td width="11%">
+                        <input type="text" class="auto_size">
+                    </td>
+                    <td width="11%">
+                        <input type="text" class="auto_size">
+                    </td>
+                    <td width="11%">
+                        <input type="text" class="auto_size">
+                    </td>
+                    <td width="11%">
+                        <input type="text" class="auto_size">
+                    </td>
+                    <td width="11%">
+                        <input type="text" class="auto_size">
+                    </td>
+                    <td width="11%">
+                        <button class="btn_del" onclick="delfirst()">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <label style="width: auto">15. Work Experience (Latest First) </label>
+        <input type="checkbox" checked style="width: auto">
+        <br><br>
+        <table border="1px" widht="100%" cellspacing="0" id="Experience">
+            <tr>
+                <th>Name of the Organization</th>
+                <th>Designation & Grade</th>
+                <th>Total Salary Drawn</th>
+                <th>From (Mon-YYYY)</th>
+                <th>From (Mon-YYYY)</th>
+                <th>Nature of Work relevant for applie</th>
+                <th><button id="btn_add2">Add Row</button></th>
+            </tr>
+            <tr id="addr2">
+                <td width="11%">
+                    <input type="text" class="auto_size">
+                </td>
+                <td width="11%">
+                    <input type="text" class="auto_size">
+                </td>
+                <td width="11%">
+                    <input type="text" class="auto_size">
+                </td>
+                <td width="11%">
+                    <select class="auto_size">
+                            <option value="">Select</option>
+                        </select>
+                    <input type="text" class="auto_size">
+                </td>
+                <td width="11%">
+                    <select class="auto_size">
+                            <option value="">Select</option>
+                        </select>
+                    <input type="text" class="auto_size">
+                </td>
+                <td width="11%">
+                    <input type="text" class="auto_size">
+                </td>
+                <td width="11%">
+                    <button class="btn_del" onclick="delsecond()">Delete</button>
+                </td>
+            </tr>
+        </table>
+        <hr><br><br>
+    </div>
+    <!-- end of block 4 -->
+
+    <div class="block5">
+        <table width="100%" id="block4">
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;">16. Any Short Term Certificate courses/ Training Undergone</label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br> If so, list the details
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;">17. GATE/ UGC-CSIR Examination etc. Qualified, if any</label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br> (Discipline/ Branch, Year of Passing, %)
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;">18. a) P.G (M.E/ M. Tech) Project Title
+                        </label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="3"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;"> b) P.G Project Synopsis/ Abstract (Max. 250 Words)</label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;">19. a) Ph.D Thesis Title
+                        </label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="3"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;"> b) Ph.D Thesis Synopsis/ Abstract (Max. 250 Words)</label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;"> 20. Workshops/ Seminars/ Conferences attended</label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;"> 21. Papers published/ presented / Technical talks delivered</label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;"> 22. Any additional info that may not have been covered</label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <label style="width: auto;"> 23. References (Name, Occupation, Addr, Email, Mobile#) <span
+                                class="required">*</span>
+                        </label>
+                </td>
+                <td style="width:50%">
+                    <textarea name="" id="" cols="60" rows="10"></textarea><br> (at least 2 references)
+
+                </td>
+            </tr>
+        </table><br><br>
+        <hr><br><br>
+
+        <!-- block 4 end -->
+        <div class="block5">
+            <label style="width: auto;">Application Fees Details</label><br><br>
+            <table width="100%">
+                <tr>
+                    <td>
+                        <table border="0px" cellspacing="5px" width="50%" style="border: 2px solid black; margin-left:20px;">
+                            <tr>
+                                <td>
+                                    <label style="text-decoration: underline;">Mode of Payment</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label style="text-decoration: underline;">Bank and Branch</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label style="text-decoration: underline;">Transaction Id <span
+                                                class="required">*</span></label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label style="text-decoration: underline;">Transaction Date <span
+                                                class="required">*</span></label>
+                                </td>
+                                <td>
+                                    <input type="date">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="text-align: center;">
+                        <label style="width:auto;">
+                                Upload proof of payment <span class="required">*</span>
+                            </label><br><br>
+                        <div style="width:200px ; height:200px ; border:1px solid black ;margin: auto;"> </div>
+                        <input type="file">
+                    </td>
+
+            </table><br><br>
+            <hr>
+        </div>
+        <!--block5 end  -->
+
+        <div class="block6">
+            <label>
+                    Upload your CV </label>File name: [yourname_CV.pdf]<span class="required">*</span><br>
+            <input type="file">
+            <br><br>
+            <h4 style="text-decoration:underline ;">
+                DECLARATION
+            </h4>
+            <p>
+                <Strong>
+                        1. I certify that all information provided in this application is true, complete and correct to
+                        the best of my knowledge and
+                        belief.
+                        I understand that any false information or omission of information may disqualify me from
+                        consideration for employment
+                        and may result in dismissal from the job, if discovered at a later date.</Strong>
+            </p>
+            <p>
+                <Strong>
+                        2. I have read and understood the above declaration before signing this.</Strong>
+            </p>
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="" style="width:auto" ;>Place <span class="required">*</span></label>
+                        <input type="text" style="width:auto ;">
+                    </td>
+
+                    <td>
+                        <label for="" style="width:auto ;">Date</label>
+                        <input type="datetime" style="width:auto ;">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <input type="checkbox" checked style="width:auto">
+            <a href="#" style="color:black ;"> I accept the Terms and Conditions</a>
+            <br><br>
+            <div class="btn_div" style="text-align: center;">
+                <button style="background-color: green;"> SUBMIT FORM</button>
+                <button style="background-color:blue;">SAVE DRAFT</button>
+                <button style="background-color:yellow ;">CLEAR FORM</button>
+                <button style="background-color:red ;">BACK</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

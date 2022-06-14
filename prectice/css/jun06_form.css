@@ -1,0 +1,50 @@
+
+
+.formContainer{
+margin-top: 30px;
+    width: 70vw;
+    height: 100vh;
+    margin:   0 auto;
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+.formContainerInside{
+ 
+
+}
+.formRow1 {
+    margin-top: 15px;
+ }
+ .formRow1 h2{
+     text-align: center;
+    
+ }
+.formRow{
+    display: grid;
+    grid-template-columns: 55% 35%;
+    font-size: 20px;
+}
+
+.starRed{
+    color: red;
+}
+.label{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.label select{
+width: 60%;
+    height: 35px;
+    margin-left: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+
+}
+.empty{
+ 
+}
+
+hr{
+    margin: 30px 20px;
+}
